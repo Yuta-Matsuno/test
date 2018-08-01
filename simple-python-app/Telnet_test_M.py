@@ -28,7 +28,7 @@ class Telnet:
         date = datetime.datetime.today()
         time = str(date.strftime("%Y-%m-%d_%H:%M:%S"))
         filename = 'currentconfig.txt'
-        f_obj = open(filename, 'w')
+        f_obj = open(/ver/log/filename, 'w')
         string = tn.read_all()
         f_obj.write(string)
         f_obj.close()
