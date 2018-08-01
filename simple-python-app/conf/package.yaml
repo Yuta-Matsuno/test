@@ -20,4 +20,4 @@ app:
 # Specify runtime and startup
   startup:
     rootfs: rootfs.tar
-    target: ["/usr/bin/poll-temperature.py"]
+    target: ["/usr/bin/TelnetPing_loop.py"]
