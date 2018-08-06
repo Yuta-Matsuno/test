@@ -12,5 +12,3 @@ RUN chmod 777 /usr/bin/poll-temperature.py
 RUN chmod 777 /usr/bin/Telnet_test_M.py
 RUN chmod 777 /usr/bin/Ping_test_M.py
 RUN chmod 777 /usr/bin/TelnetPing_loop.py
-
-CMD /usr/bin/TelnetPing_loop.py 172.30.102.253 172.30.102.253 cisco cisco
