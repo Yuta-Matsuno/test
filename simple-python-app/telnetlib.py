@@ -245,7 +245,7 @@ class Telnet:
 
         """
         if self.debuglevel > 0:
-            print('Telnet(%s,%s):' % (self.host, self.port), end = ' ')
+            print('Telnet(%s,%s):' % (self.host, self.port), end == ' ')
             if args:
                 print(msg % args)
             else:
