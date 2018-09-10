@@ -1,5 +1,4 @@
 import telnetlib
-import datetime
 
 #HOST = "172.30.157.144"
 #user = "root"
@@ -12,8 +11,7 @@ class Telnet:
 
     def test_method(self, val1, HOST, user, password):
 
-        #tn = telnetlib.Telnet(HOST)
-        tn.write("telnet" + HOST)
+        tn = telnetlib.Telnet(HOST)
         tn.read_until("Username:")
         tn.write(user + "\n")
 
