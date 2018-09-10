@@ -1,5 +1,4 @@
 import telnetlib
-import datetime
 
 class Telnet:
 
