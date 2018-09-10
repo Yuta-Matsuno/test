@@ -12,7 +12,8 @@ class Telnet:
 
     def test_method(self, val1, HOST, user, password):
 
-        tn = telnetlib.Telnet(HOST)
+        #tn = telnetlib.Telnet(HOST)
+        tn.write("telnet" + HOST)
         tn.read_until("Username:")
         tn.write(user + "\n")
 
@@ -25,8 +26,8 @@ class Telnet:
             tn.write("show run\n")
             tn.write("exit\n")
 
-        date = datetime.datetime.today()
-        time = str(date.strftime("%Y-%m-%d_%H:%M:%S"))
+#        date = datetime.datetime.today()
+#        time = str(date.strftime("%Y-%m-%d_%H:%M:%S"))
         filename = 'currentconfig.txt'
         f_obj = open(filename, 'w')
         string = tn.read_all()
