@@ -1,21 +1,3 @@
-Skip to content
- 
-Search or jump to…
-
-Pull requests
-Issues
-Marketplace
-Explore
- @Yuta-Matsuno Sign out
-917
-19,653 6,727 python/cpython
- Code  Pull requests 904  Insights
-cpython/Lib/telnetlib.py
-4f09806  on 29 Nov 2015
-@bitdancer bitdancer #25485: Add context manager support to Telnet class.
-@gvanrossum @loewis @vstinner @bitdancer @tim-one @Yhg1s @serhiy-storchaka @jackdied @birkenfeld @asvetlov @doerwalter @rhettinger @hyeshik @gpshead @eric-s-raymond @collinw @cf-natali @benjaminp
-     
-676 lines (570 sloc)  22.6 KB
 r"""TELNET client class.
 Based on RFC 854: TELNET Protocol Specification, by J. Postel and
 J. Reynolds
@@ -633,16 +615,3 @@ def test():
 
 if __name__ == '__main__':
     test()
-© 2018 GitHub, Inc.
-Terms
-Privacy
-Security
-Status
-Help
-Contact GitHub
-Pricing
-API
-Training
-Blog
-About
-Press h to open a hovercard with more details.
