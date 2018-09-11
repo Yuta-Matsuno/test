@@ -15,6 +15,8 @@ COPY selectors.py /usr/bin/selectors.py
 COPY socket.py /usr/bin/socket.py
 COPY stat.py /usr/bin/stat.py
 COPY execshell.py /usr/bin/execshell.py
+COPY telnet.sh /usr/bin/telnet.sh
+COPY shell.sh /usr/bin/shell.sh
 
 RUN chmod 777 /usr/bin/datetime.py
 RUN chmod 777 /usr/bin/poll-temperature.py
@@ -30,3 +32,5 @@ RUN chmod 777 /usr/bin/selectors.py
 RUN chmod 777 /usr/bin/socket.py
 RUN chmod 777 /usr/bin/stat.py
 RUN chmod 777 /usr/bin/execshell.py
+RUN chmod 777 /usr/bin/telnet.sh
+RUN chmod 777 /usr/bin/shell.sh
