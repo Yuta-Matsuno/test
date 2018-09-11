@@ -1013,7 +1013,7 @@ class time:
     """
     __slots__ = '_hour', '_minute', '_second', '_microsecond', '_tzinfo', '_hashcode', '_fold'
 
-    def __new__(cls, hour=0, minute=0, second=0, microsecond=0, tzinfo=None, *, fold=0):
+    def __new__(cls, hour=0, minute=0, second=0, microsecond=0, tzinfo=None, hashcode=0, fold=0):
         """Constructor.
         Arguments:
         hour, minute (required)
@@ -1263,7 +1263,7 @@ class time:
         return offset
 
     def replace(self, hour=None, minute=None, second=None, microsecond=None,
-                tzinfo=True, *, fold=None):
+                tzinfo=True, hashcode=None, fold=None):
         """Return a new time with new values for the specified fields."""
         if hour is None:
             hour = self.hour
@@ -1327,7 +1327,7 @@ class datetime(date):
     __slots__ = date.__slots__ + time.__slots__
 
     def __new__(cls, year, month=None, day=None, hour=0, minute=0, second=0,
-                microsecond=0, tzinfo=None, *, fold=0):
+                microsecond=0, tzinfo=None, hashcode=0, fold=0):
         if isinstance(year, bytes) and len(year) == 10 and 1 <= year[2]&0x7F <= 12:
             # Pickle support
             self = object.__new__(cls)
@@ -1543,7 +1543,7 @@ class datetime(date):
 
     def replace(self, year=None, month=None, day=None, hour=None,
                 minute=None, second=None, microsecond=None, tzinfo=True,
-                *, fold=None):
+                hashcode=None, fold=None):
         """Return a new datetime with new values for the specified fields."""
         if year is None:
             year = self.year
