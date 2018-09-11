@@ -11,8 +11,8 @@ while True:
     print('Success')
     os.rename('./show-run.log', './show-run_' + '{0:02d}'.format(counter) + '.log')
     now = time.ctime()
-    cnvtime = time.strptime(now)
-    print(time.strftime("%Y/%m/%d %H:%M", cnvtime))
+    jst = time.time() + 32400
+    print('Config save time = '+ time.ctime(jst))
   else:
     print('Fail')
   if counter == 5:
