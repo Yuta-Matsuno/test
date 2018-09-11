@@ -1,5 +1,7 @@
 import os
 
+counter = 0
+
 while True:
   counter += 1
   answer = os.system('./shell.sh')
