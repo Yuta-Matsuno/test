@@ -1,5 +1,8 @@
 import os
 
-answer = os.getoutput("./hogehoge.sh hikisuu")
+answer = os.system('./hogehoge.sh hikisuu')
 
-print answer
+if(answer == 0)
+  print("Success")
+  else
+  print("Fail")
