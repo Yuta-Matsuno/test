@@ -1,6 +1,6 @@
 import os
 
-answer = os.system('./hogehoge.sh hikisuu')
+answer = os.system('./shell.sh')
 
 if　answer == 0:
   print('Success')
