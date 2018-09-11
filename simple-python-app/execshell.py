@@ -1,5 +1,5 @@
 import os
-import datetime
+import time
 
 counter = 0
 
@@ -10,9 +10,9 @@ while True:
   if answer == 0:
     print('Success')
     os.rename('./show-run.log', './show-run_' + '{0:02d}'.format(counter) + '.log')
-    date = datetime.datetime.today()
-    time = str(date.strftime("%Y-%m-%d_%H:%M:%S"))
-    print(time)
+    now = time.ctime()
+    cnvtime = time.strptime(now)
+    print(time.strftime("%Y/%m/%d %H:%M", cnvtime))
   else:
     print('Fail')
   if counter == 5:
